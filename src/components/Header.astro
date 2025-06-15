@@ -1,0 +1,44 @@
+---
+import MenuIcon from "../icons/MenuIcon.astro";
+---
+
+<header
+  class="fixed z-10 flex items-center justify-around gap-10 w-full lg:hover:bg-carbon transition py-3 lg:bg-carbon/20 px-5 bg-carbon"
+>
+  <div class="w-48">
+    <img
+      src="/11.jpg"
+      alt=""
+      class="size-16 lg:size-20 object-cover rounded-full"
+    />
+  </div>
+  <nav
+    class="lg:flex items-center bg-white/20 py-2 px-10 rounded-full text-white gap-10 hidden"
+  >
+    <a
+      href="#HOME"
+      class="px-10 py-2 rounded-full hover:bg-sapphire transition font-medium"
+      >Inicio</a
+    >
+    <a
+      href="#SERVICES"
+      class="px-10 py-2 rounded-full hover:bg-sapphire transition font-medium"
+      >Servicios</a
+    >
+    <a
+      href="#CONTACT"
+      class="px-10 py-2 rounded-full hover:bg-sapphire transition font-medium"
+      >Contacto</a
+    >
+  </nav>
+  <button
+    class="bg-carbon border border-white/20 w-48 py-3 rounded text-white hover:bg-sapphire transition cursor-pointer hidden lg:inline"
+    >Contactame</button
+  >
+
+  <div class="lg:hidden w-48 flex justify-end items-center text-white">
+    <button>
+      <MenuIcon sizes="40" />
+    </button>
+  </div>
+</header>

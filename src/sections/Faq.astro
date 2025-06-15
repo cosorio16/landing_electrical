@@ -1,0 +1,67 @@
+---
+import content from "../lib/content";
+import QuestionIcon from "../icons/QuestionIcon.astro";
+---
+
+<section
+  class="flex flex-col items-center py-20 px-5 xl:px-20 gap-10 border-b-neutral-300 border-b"
+>
+  <h1 class="text-5xl uppercase font-bold">Preguntas Frecuentes</h1>
+  <div class="flex flex-col gap-5 w-full max-w-6xl m-auto">
+    {
+      content.faq.map((f) => (
+        <div class="border-2 rounded faqCard border-neutral-300 flex flex-col w-full p-5  justify-center gap-2 cursor-pointer h-24 transition-all duration-300">
+          <h1 class="lg:text-2xl text-lg font-medium">{f.title}</h1>
+          <p class="descriptionText opacity-0 absolute">{f.description}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .faqCard.active {
+    border: 2px solid #ff511f;
+    height: 150px;
+    p {
+      display: block;
+      opacity: 1;
+      position: relative;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .faqCard.active {
+      height: 300px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    let activeCard = 0;
+
+    const cardsFaq = document.querySelectorAll(".faqCard");
+
+    function toogleFaq() {
+      cardsFaq.forEach((c, i) => {
+        const card = c as HTMLElement;
+
+        if (i == activeCard) {
+          card.classList.add("active");
+        } else {
+          card.classList.remove("active");
+        }
+      });
+    }
+
+    toogleFaq();
+
+    cardsFaq.forEach((c, i) => {
+      c.addEventListener("click", () => {
+        activeCard = i;
+        toogleFaq();
+      });
+    });
+  });
+</script>

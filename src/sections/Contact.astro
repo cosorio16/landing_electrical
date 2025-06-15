@@ -1,0 +1,79 @@
+---
+import CardCall from "../components/CardCall.astro";
+import LocationIcon from "../icons/LocationIcon.astro";
+import MailIcon from "../icons/MailIcon.astro";
+import WhatsappIcon from "../icons/WhatsappIcon.astro";
+---
+
+<section
+  class="flex flex-col gap-10 items-center px-5 xl:px-20 py-20"
+  id="CONTACT"
+>
+  <h1 class="uppercase text-5xl lg:text-7xl font-bold">Contacto</h1>
+  <div class="flex flex-col w-full gap-5 max-w-7xl m-auto">
+    <header
+      class="w-full items-center justify-center lg:justify-between flex-wrap lg:flex hidden"
+    >
+      <button class="flex items-center gap-2">
+        <span class="aspect-square p-2 rounded-full bg-orange text-white">
+          <LocationIcon sizes="35" />
+        </span>
+        <span class="text-lg lg:text-2xl font-medium">
+          Cra 19 #47-02 cuidad del puerto - Soledad
+        </span>
+      </button>
+
+      <div class="flex items-center gap-5">
+        <button class="bg-whatsapp text-white aspect-square p-2 rounded-full">
+          <WhatsappIcon sizes="35" />
+        </button>
+        <button
+          class="border text-orange border-orange aspect-square p-2 rounded-full"
+        >
+          <MailIcon sizes="35" />
+        </button>
+      </div>
+    </header>
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.6180297287865!2d-74.78528812404382!3d10.916606289240772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef5d281887f6f0f%3A0x64e678d9b4aeb89b!2sCra.%2019%20%2347-02%2C%20Soledad%2C%20Atl%C3%A1ntico!5e0!3m2!1ses-419!2sco!4v1749765365480!5m2!1ses-419!2sco"
+      class="h-100 w-full ring-2 ring-orange/20 hover:ring-orange/50 transition"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <div class="flex justify-evenly items-center lg:hidden">
+      <button class="bg-whatsapp text-white aspect-square p-2 rounded-full">
+        <WhatsappIcon sizes="35" />
+      </button>
+      <button
+        class="border text-orange border-orange aspect-square p-2 rounded-full"
+      >
+        <MailIcon sizes="35" />
+      </button>
+    </div>
+
+    <div class="lg:flex items-center justify-evenly gap-10 text-xl hidden">
+      <span
+        class="px-8 py-2 rounded-full border border-neutral-200 hover:bg-orange hover:text-white transition"
+      >
+        Atención inmediata
+      </span>
+      <span class="size-3 bg-orange aspect-square rounded-full"></span>
+      <span
+        class="px-8 py-2 rounded-full border border-neutral-200 hover:bg-orange hover:text-white transition"
+      >
+        Diagnóstico preciso
+      </span>
+      <span class="size-3 bg-orange aspect-square rounded-full"></span>
+      <span
+        class="px-8 py-2 rounded-full border border-neutral-200 hover:bg-orange hover:text-white transition"
+      >
+        Instalación profesional
+      </span>
+    </div>
+  </div>
+
+  <CardCall />
+</section>

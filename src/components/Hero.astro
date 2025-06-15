@@ -1,0 +1,92 @@
+---
+import ArrowLineIcon from "../icons/ArrowLineIcon.astro";
+import ClockIcon from "../icons/ClockIcon.astro";
+
+const characts = [
+  "Instalación",
+  "Mantenimiento",
+  "Reparación",
+  "Aires Acondicionados",
+  "Paneles Solares",
+];
+---
+
+<section
+  style="background-image: url('15.jpg');"
+  class="w-full relative bg-center bg-cover flex flex-col gap-10 items-center"
+  id="HOME"
+>
+  <div
+    class="w-full xl:pb-52 h-full bg-carbon/50 flex items-center justify-end text-white flex-col gap-5 pt-40"
+  >
+    <h2
+      class="xl:text-5xl text-2xl font-semibold flex items-center gap-2 rounded-full px-5 bg-carbon/30"
+    >
+      <span class="text-orange">
+        <ClockIcon sizes="45" />
+      </span>
+      Disponible las 24 horas
+    </h2>
+    <h1 class="text-5xl lg:text-7xl font-black text-center"
+      >Soluciones <span class="text-orange"> Eléctricas </span></h1
+    >
+    <div
+      class="flex items-center gap-5 lg:text-xl font-medium flex-wrap justify-center text-sm"
+    >
+      {
+        characts.map((c, i) => (
+          <>
+            <span class="rounded-full bg-white/20 px-3 py-2 transition">
+              {c}
+            </span>
+            {i + 1 < characts.length && (
+              <span class="size-2 bg-sapphire aspect-square rounded-full hidden lg:inline" />
+            )}
+          </>
+        ))
+      }
+    </div>
+
+    <div
+      class="xl:w-11/12 min-h-96 max-w-7xl bg-carbon flex items-center justify-center gap-10 flex-col p-5 py-10 xl:p-20  text-pretty lg:absolute lg:-bottom-52 mt-10 lg:text-xl"
+    >
+      <div class="heroText flex flex-col gap-3">
+        <p>
+          ¿Buscas un técnico electromecánico confiable en <span
+            >Barranquilla</span
+          > con experiencia comprobada en redes eléctricas, aire acondicionado y
+          energía solar?
+        </p>
+
+        <p>
+          Con más de <span>10 años de trayectoria</span>, ofrezco soluciones <span
+            >rápidas, seguras</span
+          > y a la
+          <span> medida</span>
+          de tu proyecto, tanto en el Atlántico como en <span
+            >cualquier rincón de Colombia</span
+          >.
+        </p>
+      </div>
+
+      <button
+        class="xl:text-2xl font-medium bg-orange lg:px-15 px-5 py-3 text-white rounded-full flex items-center gap-3 xl:hover:gap-5 transition-all duration-300 cursor-pointer"
+      >
+        ¡Solicita tu cotización hoy mismo!
+
+        <span>
+          <ArrowLineIcon sizes="30" />
+        </span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .heroText {
+    span {
+      color: #007bff;
+      font-weight: 700;
+    }
+  }
+</style>
