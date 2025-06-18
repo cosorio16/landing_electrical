@@ -6,8 +6,10 @@ import QuestionIcon from "../icons/QuestionIcon.astro";
 <section
   class="flex flex-col items-center py-20 px-5 xl:px-20 gap-10 border-b-neutral-300 border-b"
 >
-  <h1 class="text-5xl uppercase font-bold text-center">Preguntas Frecuentes</h1>
-  <div class="flex flex-col gap-5 w-full max-w-6xl m-auto">
+  <h1 data-aos="fade-down" class="text-5xl uppercase font-bold text-center">
+    Preguntas Frecuentes
+  </h1>
+  <div class="flex flex-col gap-5 w-full max-w-6xl m-auto" data-aos="zoom-in">
     {
       content.faq.map((f) => (
         <div class="border-2 rounded faqCard border-neutral-300 flex flex-col w-full p-5  justify-center gap-2 cursor-pointer h-24 transition-all duration-300">

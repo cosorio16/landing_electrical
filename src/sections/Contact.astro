@@ -14,7 +14,8 @@ import WhatsappIcon from "../icons/WhatsappIcon.astro";
     <header
       class="w-full items-center justify-center lg:justify-between flex-wrap lg:flex hidden"
     >
-      <button class="flex items-center gap-2">
+      <button
+        data-aos="fade-up" class="flex items-center gap-2">
         <span class="aspect-square p-2 rounded-full bg-orange text-white">
           <LocationIcon sizes="35" />
         </span>
@@ -25,11 +26,13 @@ import WhatsappIcon from "../icons/WhatsappIcon.astro";
 
       <div class="flex items-center gap-5">
         <button
+          data-aos="fade-up"
           class="bg-whatsapp text-white aspect-square p-2 rounded-full whatsappButton"
         >
           <WhatsappIcon sizes="35" />
         </button>
         <a
+          data-aos="fade-down"
           href="mailto:2jorgemol@gmail.com"
           class="border text-orange border-orange aspect-square p-2 rounded-full"
         >
@@ -39,6 +42,7 @@ import WhatsappIcon from "../icons/WhatsappIcon.astro";
     </header>
 
     <iframe
+      data-aos="zoom-out"
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.6180297287865!2d-74.78528812404382!3d10.916606289240772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef5d281887f6f0f%3A0x64e678d9b4aeb89b!2sCra.%2019%20%2347-02%2C%20Soledad%2C%20Atl%C3%A1ntico!5e0!3m2!1ses-419!2sco!4v1749765365480!5m2!1ses-419!2sco"
       class="h-100 w-full ring-2 ring-orange/20 hover:ring-orange/50 transition"
       style="border:0;"
@@ -50,6 +54,7 @@ import WhatsappIcon from "../icons/WhatsappIcon.astro";
       class="flex flex-wrap gap-5 items-center justify-center justify-items-center lg:hidden"
     >
       <button
+        data-aos="fade-up"
         class="bg-whatsapp text-white px-8 py-1.5 rounded-full flex items-center gap-2 w-full justify-center max-w-52 whatsappButton"
       >
         <WhatsappIcon sizes="35" />
@@ -57,6 +62,7 @@ import WhatsappIcon from "../icons/WhatsappIcon.astro";
       </button>
 
       <a
+        data-aos="fade-down"
         href="mailto:2jorgemol@gmail.com"
         class="border text-orange border-orange px-8 py-1.5 rounded-full flex items-center gap-2 w-full justify-center max-w-52"
       >
