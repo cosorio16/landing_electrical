@@ -5,7 +5,7 @@ import ArrowLineIcon from "../icons/ArrowLineIcon.astro";
 
 <section style="background-image: url(/20.jpg);" class="" id="SERVICES">
   <div
-    class="w-full h-full bg-carbon/30 py-20 flex flex-col gap-12 px-3 hover:bg-carbon/50 transition"
+    class="w-full h-full bg-carbon/30 py-24 flex flex-col gap-12 px-3 hover:bg-carbon/50 transition"
   >
     <h1 class="text-center text-6xl lg:text-7xl uppercase text-white font-bold">
       Servicios
@@ -19,9 +19,12 @@ import ArrowLineIcon from "../icons/ArrowLineIcon.astro";
                 {s.title}
               </h1>
               <p class="xl:text-lg">{s.description}</p>
+              <button class="border py-2 px8 bg-sapphire/70 rounded max-w-52 font-medium text-lg self-center w-full border-sapphire/50 active:bg-sapphire lg:hidden">
+                Me interesa este
+              </button>
             </div>
 
-            <button class="transition duration-300 p-2.5 rounded-full hidden xl:inline">
+            <button class="transition duration-300 p-2.5 rounded-full hidden lg:inline arrowButton bg-white/10">
               <ArrowLineIcon sizes="30" />
             </button>
           </div>
@@ -35,25 +38,39 @@ import ArrowLineIcon from "../icons/ArrowLineIcon.astro";
   button.activeButton {
     border-radius: 50%;
     transform: rotate(-45deg);
-    /* color: #ff6200; */
+    color: #007bff;
   }
 </style>
 
 <script>
+  import content from "../lib/content";
+  import sendMessage from "../utlis/whatsapp";
+
+  const texts: { [key: number]: string } = {
+    0: content.messages.wires,
+    1: content.messages.airs,
+    2: content.messages.solarPanels,
+  };
+
   document.addEventListener("DOMContentLoaded", () => {
     const servicesCard = document.querySelectorAll(".cardservice");
 
     servicesCard.forEach((c, i) => {
       c.addEventListener("mouseenter", (event) => {
         const target = event.target as HTMLElement;
-        const button = target.querySelector("button");
+        const button = target.querySelector(".arrowButton");
+        console.log(button, target);
         button?.classList.add("activeButton");
       });
 
       c.addEventListener("mouseleave", (event) => {
         const target = event.target as HTMLElement;
-        const button = target.querySelector("button");
+        const button = target.querySelector(".arrowButton");
         button?.classList.remove("activeButton");
+      });
+
+      c.addEventListener("click", () => {
+        sendMessage(texts[i]);
       });
     });
   });

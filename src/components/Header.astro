@@ -1,5 +1,6 @@
 ---
 import MenuIcon from "../icons/MenuIcon.astro";
+import sendMessage from "../utlis/whatsapp";
 ---
 
 <header
@@ -33,8 +34,8 @@ import MenuIcon from "../icons/MenuIcon.astro";
   </nav>
 
   <button
-    class="bg-carbon border border-white/20 w-48 py-3 rounded text-white hover:bg-sapphire transition cursor-pointer hidden lg:inline"
-    >Contactame</button
+    class="bg-carbon border border-white/20 w-48 py-3 rounded text-white hover:bg-sapphire transition cursor-pointer hidden lg:inline headerContact"
+    >Contáctame</button
   >
 
   <div class="lg:hidden w-48 flex justify-end items-center text-white">
@@ -54,19 +55,18 @@ import MenuIcon from "../icons/MenuIcon.astro";
       >Contacto</a
     >
     <button
-      class="bg-carbon border border-white/20 w-48 py-3 rounded text-white hover:bg-sapphire transition cursor-pointer text-lg self-center"
-      >Contactame
+      class="bg-carbon border border-white/20 w-48 py-3 rounded text-white hover:bg-sapphire transition cursor-pointer text-lg self-center headerContact"
+      >Contáctame
     </button>
   </nav>
 </header>
-
 
 <style>
   .mobileMenu {
     transform: translateY(-50%);
     opacity: 0;
     pointer-events: none;
-    transition: all .333s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 0.333s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
   .mobileMenu.active {
@@ -75,3 +75,19 @@ import MenuIcon from "../icons/MenuIcon.astro";
     pointer-events: all;
   }
 </style>
+
+<script>
+  import sendMessage from "../utlis/whatsapp";
+  import content from "../lib/content";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const headerContact = document.querySelectorAll(".headerContact");
+
+    headerContact.forEach((b) => {
+      const button = b as HTMLElement;
+      button.addEventListener("click", () => {
+        sendMessage(content.messages.header);
+      });
+    });
+  });
+</script>

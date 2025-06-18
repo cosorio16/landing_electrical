@@ -14,29 +14,28 @@ const services = [
     description:
       "Transforma tu hogar o negocio en una fuente de energía limpia y ahorra en tu factura eléctrica. Diseño e instalo sistemas solares fotovoltaicos (conexión a red o aislados) para residencias, fincas y empresas. Cimentación, estructuras metálicas, cableado y puesta en marcha con mediciones de rendimiento garantizado.",
   },
-
 ];
 
 const process = [
   {
     title: "Diagnóstico y Evaluación",
     description:
-      "Agendamos visita técnica para levantar los planos eléctricos, medir consumos y analizar el estado actual de tu instalación.",
+      "Agendamos una visita técnica para levantar los planos eléctricos, medir consumos y revisar el estado actual de tu instalación. Este diagnóstico completo tiene un valor de $70.000 COP e incluye asesoría personalizada desde el primer momento.",
   },
   {
     title: "Propuesta Económica Detallada",
     description:
-      "Te entrego un presupuesto desglosado, sin letra pequeña: materiales, mano de obra, tiempos estimados y Garantía.",
+      "Te entrego un presupuesto claro y desglosado, sin letra pequeña: incluye materiales, mano de obra, tiempos de ejecución y condiciones de garantía, todo adaptado a tus necesidades.",
   },
   {
     title: "Ejecución con Estándares de Calidad",
     description:
-      "Instalación o mantenimiento con cámaras termográficas, detectores de fugas y herramientas certificadas. Minuciosa atención a detalles para tu seguridad y tranquilidad.",
+      "Realizo la instalación o mantenimiento usando herramientas certificadas, cámaras termográficas y protocolos técnicos que garantizan seguridad, eficiencia y atención al detalle.",
   },
   {
     title: "Entrega y Capacitación",
     description:
-      "Pruebas finales, certificación de trabajos y una breve capacitación para que conozcas el mantenimiento básico de tu sistema.",
+      "Finalizado el trabajo, realizo pruebas técnicas, entrego certificación del servicio y te brindo una breve capacitación para el uso y mantenimiento básico del sistema instalado.",
   },
 ];
 
@@ -71,6 +70,18 @@ const faq = [
   },
 ];
 
+const messages = {
+  header:
+    "Hola, vi tu página web y me gustaría saber más sobre tus servicios. ¿Estás disponible?",
+  price:
+    "Hola, quiero solicitar una cotización para un servicio eléctrico. ¿Qué información necesitas?",
+  wires:
+    "Hola, necesito ayuda con la instalación o reparación de una red eléctrica. ¿Podrías visitarme o darme más detalles?",
+  airs: "Hola, estoy interesado en instalar un aire acondicionado o hacerle mantenimiento. ¿Podrías asesorarme?",
+  solarPanels:
+    "Hola, quiero saber más sobre la instalación de paneles solares. ¿Me puedes asesorar?",
+  footer:
+    "Hola, llegué al final de tu página web y quiero cotizar un servicio. ¿Dónde te puedo enviar los detalles?s",
+};
 
-
-export default { services, faq, process }
+export default { services, faq, process, messages };
