@@ -31,6 +31,7 @@ import MenuIcon from "../icons/MenuIcon.astro";
       >Contacto</a
     >
   </nav>
+
   <button
     class="bg-carbon border border-white/20 w-48 py-3 rounded text-white hover:bg-sapphire transition cursor-pointer hidden lg:inline"
     >Contactame</button
@@ -41,4 +42,36 @@ import MenuIcon from "../icons/MenuIcon.astro";
       <MenuIcon sizes="40" />
     </button>
   </div>
+
+  <nav
+    class="text-white bg-carbon absolute top-full w-full py-8 flex flex-col px-10 gap-5 uppercase text-2xl font-medium lg:hidden mobileMenu"
+  >
+    <a class="ring px-5 py-2 rounded-full ring-white/10" href="#HOME">Inicio</a>
+    <a class="ring px-5 py-2 rounded-full ring-white/10" href="#SERVICES"
+      >Servicios</a
+    >
+    <a class="ring px-5 py-2 rounded-full ring-white/10" href="#CONTACT"
+      >Contacto</a
+    >
+    <button
+      class="bg-carbon border border-white/20 w-48 py-3 rounded text-white hover:bg-sapphire transition cursor-pointer text-lg self-center"
+      >Contactame
+    </button>
+  </nav>
 </header>
+
+
+<style>
+  .mobileMenu {
+    transform: translateY(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .333s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .mobileMenu.active {
+    transform: translateY(0%);
+    opacity: 1;
+    pointer-events: all;
+  }
+</style>

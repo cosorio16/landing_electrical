@@ -1,8 +1,53 @@
----
-const { sizes } = Astro.props;
----
-
-<svg width={sizes} height={sizes} viewBox="0 0 24 24"
-  ><path fill="currentColor" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"
-  ></path></svg
+<div
+  class="aspect-square w-8 flex flex-col justify-between menuButton relative"
 >
+  <div class="w-10 h-1.5 bg-white rounded-full"></div>
+  <div class="w-10 h-1.5 bg-white rounded-full"></div>
+  <div class="w-10 h-1.5 bg-white rounded-full"></div>
+</div>
+
+<style>
+  .menuButton div:nth-child(1) {
+    transition: opacity 0.333s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .menuButton div:nth-child(2) {
+    transition: transform 0.333s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .menuButton div:nth-child(3) {
+    transition: transform 0.333s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .menuButton.active div:nth-child(1) {
+    opacity: 0;
+    transition: opacity 0.333s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .menuButton.active div:nth-child(2) {
+    position: absolute;
+    transform: rotate(45deg) translateX(-15%);
+    top: 50%;
+    transition: transform 0.333s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .menuButton.active div:nth-child(3) {
+    position: absolute;
+    transform: rotate(-45deg) translateY(-100%);
+    top: 50%;
+    transition: transform 0.333s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuButton = document.querySelector(".menuButton");
+    const mobileMenu = document.querySelector(".mobileMenu");
+
+    menuButton?.addEventListener("click", () => {
+      menuButton?.classList.toggle("active");
+      mobileMenu?.classList.toggle("active");
+    });
+
+    mobileMenu?.addEventListener("click", () => {
+      menuButton?.classList.toggle("active");
+      mobileMenu?.classList.toggle("active");
+    });
+  });
+</script>

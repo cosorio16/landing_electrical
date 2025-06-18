@@ -17,10 +17,10 @@ const characts = [
   id="HOME"
 >
   <div
-    class="w-full xl:pb-52 h-full bg-carbon/50 flex items-center justify-end text-white flex-col gap-5 pt-40"
+    class="w-full lg:pb-52 h-full bg-carbon/50 flex items-center justify-end text-white flex-col gap-5 pt-40"
   >
     <h2
-      class="xl:text-5xl text-2xl font-semibold flex items-center gap-2 rounded-full px-5 bg-carbon/30"
+      class="xl:text-5xl text-2xl font-semibold flex items-center gap-2 rounded-full px-5 py-1 bg-white/20"
     >
       <span class="text-orange">
         <ClockIcon sizes="45" />
@@ -36,7 +36,7 @@ const characts = [
       {
         characts.map((c, i) => (
           <>
-            <span class="rounded-full bg-white/20 px-3 py-2 transition">
+            <span class="rounded-full bg-white/20 px-5 py-2 transition">
               {c}
             </span>
             {i + 1 < characts.length && (

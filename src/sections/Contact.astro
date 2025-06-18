@@ -43,14 +43,16 @@ import WhatsappIcon from "../icons/WhatsappIcon.astro";
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-    <div class="flex justify-evenly items-center lg:hidden">
-      <button class="bg-whatsapp text-white aspect-square p-2 rounded-full">
+    <div class="grid grid-cols-2 gap-10 justify-items-center lg:hidden">
+      <button class="bg-whatsapp text-white px-8 py-1.5 rounded-full flex items-center gap-2 w-full justify-center">
         <WhatsappIcon sizes="35" />
+        <span>Whatsapp</span>
       </button>
       <button
-        class="border text-orange border-orange aspect-square p-2 rounded-full"
+        class="border text-orange border-orange px-8 py-1.5 rounded-full flex items-center gap-2 w-full justify-center"
       >
         <MailIcon sizes="35" />
+        <span>Correo</span>
       </button>
     </div>
 

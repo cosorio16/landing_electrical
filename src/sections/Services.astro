@@ -5,17 +5,17 @@ import ArrowLineIcon from "../icons/ArrowLineIcon.astro";
 
 <section style="background-image: url(/20.jpg);" class="" id="SERVICES">
   <div
-    class="w-full h-full bg-carbon/30 py-20 flex flex-col gap-20 px-5 hover:bg-carbon/50 transition"
+    class="w-full h-full bg-carbon/30 py-20 flex flex-col gap-12 px-3 hover:bg-carbon/50 transition"
   >
-    <h1 class="text-center text-5xl lg:text-7xl uppercase text-white font-bold">
+    <h1 class="text-center text-6xl lg:text-7xl uppercase text-white font-bold">
       Servicios
     </h1>
     <div class="flex flex-col gap-5 items-center max-w-7xl m-auto">
       {
         content.services.map((s) => (
-          <div class="flex items-center px-10 justify-between bg-carbon/90 text-white py-5 gap-10 min-h-52 hover:bg-carbon transition-all cardservice border border-white/20">
-            <div class="grow flex flex-col gap-2">
-              <h1 class="xl:text-2xl text-lg font-medium text-sapphire">
+          <div class="flex items-center px-8 justify-between bg-carbon/90 text-white py-12 gap-10 min-h-52 hover:bg-carbon transition-all cardservice border border-white/20 hover:border-white/50">
+            <div class="grow flex flex-col gap-5">
+              <h1 class="xl:text-2xl text-lg font-semibold border-b border-b-white/30 text-sapphire">
                 {s.title}
               </h1>
               <p class="xl:text-lg">{s.description}</p>
@@ -35,7 +35,7 @@ import ArrowLineIcon from "../icons/ArrowLineIcon.astro";
   button.activeButton {
     border-radius: 50%;
     transform: rotate(-45deg);
-    color: #ff6200;
+    /* color: #ff6200; */
   }
 </style>
 
