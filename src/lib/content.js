@@ -81,7 +81,7 @@ const messages = {
   solarPanels:
     "Hola, quiero saber más sobre la instalación de paneles solares. ¿Me puedes asesorar?",
   footer:
-    "Hola, llegué al final de tu página web y quiero cotizar un servicio. ¿Dónde te puedo enviar los detalles?s",
+    "Hola, llegué al final de tu página web y quiero cotizar un servicio. ¿Dónde te puedo enviar los detalles?",
 };
 
 export default { services, faq, process, messages };
